@@ -60,11 +60,12 @@ cd bash-ejercicios-intro
 
 3. Navegá entre carpetas para ver los ejercicios por temática:
 
-  ├── 01_intro/
-  ├── 02_condicionales/
-  ├── 03_iteraciones/
-  ├── 04_archivos/
-  └── 05_regex/
+- [`01_intro/`](01_intro/) – Variables, entrada por consola, operaciones básicas.
+- [`02_condicionales/`](02_condicionales/) – Evaluación de condiciones simples y múltiples.
+- [`03_iteraciones/`](03_iteraciones/) – Ciclos, validaciones repetidas, cálculos por repetición.
+- [`04_archivos/`](04_archivos/) – Manejo de archivos y redirecciones en Bash.
+- [`05_regex/`](05_regex/) – Práctica de expresiones regulares sobre archivos de texto.
+
 
 4. Ejecutá los scripts desde terminal:
 ```bash
