@@ -69,5 +69,5 @@ cd bash-ejercicios-intro
 
 4. Ejecutá los scripts desde terminal:
 ```bash
-bash 01_intro/variables.sh
-``
+01_intro/variables.sh
+```
