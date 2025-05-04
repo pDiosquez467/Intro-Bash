@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Crear un script de Bash que solicite al usuario un número natural n y 
+# cree n cantidad de carpetas con los nombres carpeta1, carpeta2, etc.
+
 read -p "Ingrese un número natural: " n
 
 if ! [[ $n =~ ^[0-9]+$ ]] || [[ $n -le 0 ]]; then
