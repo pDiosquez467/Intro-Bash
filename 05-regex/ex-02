@@ -1,0 +1,22 @@
+Se tiene el archivo contraseñas.csv, el cual almacena las contraseñas de distintos usuarios
+en una plataforma. La estructura es nombre_usuario,contraseña. Se pide extraer, del archivo:
+
+Los nombres de usuario que contienen números --> grep "[0-9]" contraseñas.csv | grep -o ^[^,]*
+
+Los nombres de usuario con al menos un guión bajo (_) --> grep ".*_.*" contraseñas.csv | grep -o ^[^,]*
+
+Las contraseñas alfanúmericas --> grep -E ,[a-zA-Z0-9]+$ contraseñas.csv | grep -o [^,]*$
+
+Los nombres de usuario alfanuméricos --> grep -E "^[a-zA-Z0-9]+," contraseñas.csv | grep -o ^[^,]*
+
+Las contraseñas que comienzen y terminen con el mismo caracter --> grep -o "[^,]*$" contraseñas.csv | grep -E "^(.).*\1$"
+
+Las contraseñas con exactamente 14 caracteres (de cualquier tipo) --> grep -E ",.{14}$" contraseñas.csv | grep -o "[^,]*$"
+
+Las contraseñas seguras; son las que contienen al menos:
+    1 letra minúscula
+    1 letra mayúscula
+    1 número
+    1 caracter especial (@$!%*?&#)
+
+grep -E "[a-z]+" contraseñas.csv | grep -E "[0-9]+" | grep -E "[A-Z]+" | grep -E "[@+%&*?#]+" | grep -o [^,]*$
